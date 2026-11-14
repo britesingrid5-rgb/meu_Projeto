@@ -10,23 +10,11 @@
 
 int main(){
 
-   struct livro l1;
-   struct livro vetor[10];
-
    alocarVetor(vetor);//Aqui está chamando a função "alocarVetor" com o parâmetro vetor para o menu principal obter a execução da função. O nome da função para chamar a função que está fazendo a execução do programa e o parâmetro como ligação da função para o programa permitir que a função faça a execução devidamente. Que seria alocar o vetor com o uso do malloc.
 
    free(vetor);//Aqui está sendo liberado com o uso do free o que foi usado pela alocação do vetor. Um novo espaço de memória que foi reservado e alocado um novo endereço de memória no vetor com o uso do malloc.
 
    realocarVetor(vetor);//Aqui está chamando a função "realocarVetor" com o parâmetro vetor para o menu principal obter a execução da função. O nome da função para chamar a função que está fazendo a execução do programa e o parâmetro como ligação da função para o programa permitir que a função faça a execução devidamente. Que seria realocar o vetor: adicioar mais um espaço de memória e aloca mais endereço de memória no vetor com o uso do realloc, que serve tanto para aumentar, quanto para diminuir o espaço de memória de um inteiro. 
-   
-   FILE *livros;
-
-   livros = fopen("livros.txt", "w");//Aqui está abrindo o arquivo livros com o uso do fopen.
-
-   if(livros == NULL){//Verificando se é possível editar o arquivo com o comando if.
-      printf("\nErro. Nao foi possivel editar o arquivo livros txt.");
-      return 1;//Se não foi possível, encarra o programa.
-   }
 
    int opcao;//Declarando a variável opção do tipo(int).
 
@@ -42,51 +30,57 @@ int main(){
       printf("\n8:Gerar relatorios.");
       printf("\n9:Sair.");
       scanf("%d", &opcao);//Leitura do menu.
-      
+   
       //Instanciando o menu.
+      while(opcao != 9){///O uso do while para o menu continuar executando até chegar na opção 9: Sair.
       switch(opcao){
          case 1:
          cadastrarLivro(vetor);//Função cadastrar livro do vetor.
-       break;
+         break;
          
-       case 2:
-       listarLivros(vetor);//Função listar livros do vetor.
-       break;
+         case 2:
+         listarLivros(vetor);//Função listar livros do vetor.
+         break;
       
-       case 3:
-       buscarLivros(vetor);//Função buscar livros do vetor.
-       break;
+         case 3:
+         buscarLivros(vetor);//Função buscar livros do vetor.
+         break;
 
-       case 4:
-       removerLivroID(vetor);//Função remover livros do vetor.
-       break;
+         case 4:
+         removerLivroID(vetor);//Função remover livros do vetor.
+         break;
      
-       case 5:
-       salvarDadosTxt(l1, vetor);//Função salvar dados dos livros l1 e vetor em arquivo.txt.
-       break;
+         case 5:
+         salvarDadosTxt(vetor);//Função salvar dados dos livros do vetor em arquivo.txt.
+         break;
 
-       case 8:
-       int contador = 0;
-       int soma = 0;
-      contador = gerarRelatorios(vetor);//Função gerar relatórios do vetor, retornando o contador.
-      soma = gerarRelatorios(vetor);//Função gerar relatórios do vetor, retornando a soma.
-       printf("Total de livros: %d", soma);
+         case 6:
+         salvarDadosDat(vetor);//Função salvar dados dos livros do vetor em arquivo binário.
+         break;
 
-      for(int i = 0; i < 10; i++){
-        vetor[i].categoria;
-           contador++;
-      }
+         case 7:
+         LerArquivoSalvo(vetor);//Função ler o os dados do arquivo salvo.
+         break;
 
-      printf("\nTotal de livros por categorias: %d", contador);
+         case 8:
+         gerarRelatorios(vetor);//Função gerar relatórios do vetor.
+         break;
 
-        int maior = 0;
-        int menor = 0;
-
-       for(int i = 0; i < 1; i++){
-          printf("\nLivro mais recente e o mais antigo: %d %d", vetor[i].ano, vetor[i].ano);
-       } 
-       break;
-      }
-      
+         case 9:
+         Printf("\nDeseja salvar as alteracoes antes de encerrar o sistema e liberar a memoria utilizada.");
+         break;
+        }
+        opcao++;
+      }     
    return 1;//Encerramento do programa.
-}
+   }
+   //Obs: 6. Entregáveis
+
+   //Código-fonte completo, organizado em pastas (ex.: src/, include/).
+
+   //Makefile (obrigatório).
+
+   //Arquivo de texto explicando como compilar e executar.
+
+   //Arquivo de teste (obrigatório): um arquivo livros.txt contendo pelo menos 5 livros.
+

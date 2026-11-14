@@ -3,33 +3,12 @@
 #include "arquivo.h"//Aqui no arquivo.c está chamando o arquivo.h
 #include <stdio.h>
 
-  struct livro l1;
-  struct livro vetor[10];   
+  struct livro vetor[];   
 
 //Instanciando a função.
-void salvarDadosTxt(struct livro l1, struct livro veto[10]){
+void salvarDadosTxt(struct livro veto[10]){
 
     FILE *livros;//Declarando o arquivo livros.
-
-    if(fgets(l1.titulo, sizeof(l1.titulo), stdin)){//Leitura dos dados do livro l1.
-       fprintf(livros, "\nTitulo do livro: %s", l1.titulo); 
-    }
-
-    if(fgets(l1.autor, sizeof(l1.autor), stdin)){
-       fprintf(livros, "\nAutor do livro: %s", l1.autor); 
-    }
-
-    if(fgets(l1.categoria, sizeof(l1.categoria), stdin)){
-       fprintf(livros, "\nCategoria do livro: %s", l1.categoria); 
-    }
-
-    if(scanf("%d", &l1.id)){
-       fprintf(livros, "\nID do livro: %d", l1.id);
-    }
-
-    if(scanf("%d", &l1.ano)){//Término da leitura.
-       fprintf(livros, "\nAno de publicacao do livro: %d", l1.ano);
-    }
 
     for(int i = 0; i < 10; i++){
         if(scanf("%d", &vetor[i].id)){//Leitura dos dados dos livros vetor.
@@ -52,4 +31,6 @@ void salvarDadosTxt(struct livro l1, struct livro veto[10]){
            fprintf(livros, "%s", vetor[i].categoria); 
         }
     }
+
+    fclose(livros);//Fechando o arquivo livros.
 }

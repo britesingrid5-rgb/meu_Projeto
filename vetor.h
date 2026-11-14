@@ -12,11 +12,10 @@
 
      }livro;
 
-void alocarVetor(struct livro **vetor);//Declaração da função.
-void realocarVetor(struct livro **vetor);//Declaração da função.
-void listarLivros(struct livro vetor[10]);//Declaração da função.
-void buscarLivros(struct livro vetor[10]);//Declaração da função.
-void removerLivroID(struct livro vetor[10]);//Declaração da função.
-int gerarRelatorios(struct livro vetor[10]);//Declaração da função.
+void alocarVetor(struct livro **vetor);//Declaração da função: alocar vetor.
+void realocarVetor(struct livro **vetor);//Declaração da função: realocar vetor.
+void listarLivros(struct livro vetor[]);//Declaração da função: listar livros.
+void buscarLivros(struct livro vetor[]);//Declaração da função: buscar livros.
+void removerLivroID(struct livro vetor[]);//Declaração da função: remover livros.
+void gerarRelatorios(struct livro vetor[]);//Declaração da função: gerar relatórios.
 #endif
-
