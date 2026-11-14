@@ -12,8 +12,10 @@
 
      }livro;
 
-struct livro vetor[50];
+struct livro vetor[];
 
 void salvarDadosTxt(struct livro vetor[]);//Declaração da função.
+void salvarDadosDat(struct livro vetor[]);//Declaração da função.
+void LerArquivoSalvo(struct livro vetor[]);//Declaração da função.
 
 #endif
