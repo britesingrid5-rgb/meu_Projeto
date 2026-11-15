@@ -17,7 +17,7 @@ void salvarDadosTxt(struct livro vetor[]){
       return 1;//Se não foi possível, encarra o programa.
    }
 
-    for(int i = 0; i < 40; i++){
+    for(int i = 0; i < 25; i++){
         if(scanf("%d", &vetor[i].id)){//Leitura dos dados dos livros vetor.
            fprintf(livros, "%d", vetor[i].id);
         }
@@ -45,6 +45,17 @@ void salvarDadosTxt(struct livro vetor[]){
 //Instanciando a função: salvarDadosDat(binário).
 void salvarDadosDat(struct livro vetor[]){
 
+    FILE *livros;//Declarando o arquivo livros.
+
+    livros = fopen("livros.dat", "wb");//Aqui está abrindo o arquivo livros com o uso do fopen.
+
+   if(livros == NULL){//Verificando se é possível editar o arquivo com o comando if.
+      printf("\nErro. Nao foi possivel editar o arquivo livros dat(binario).");
+      return 1;//Se não foi possível, encarra o programa.
+   }
+
+   //Terminar o código.
+
 }
 
 //Instanciando a função: lerArquivoSalvo(Txt).
@@ -59,13 +70,7 @@ void LerArquivoSalvo(struct livro vetor[]){
       return 1;//Se não foi possível, encarra o programa.
    }
 
-   for(int i = 0; i < 40; i++){
-        (fscanf(livros, "%d", vetor[i].id));//Lendo os dados salvos no arquivo.txt
-        (fscanf(livros, "%99s", vetor[i].titulo));
-        (fscanf(livros, "%99s", vetor[i].autor));
-        (fscanf(livros, "%d", vetor[i].ano));
-        (fscanf(livros, "%49s", vetor[i].categoria));//Final da leitura.
-    }
+   //Terminar o código.
 
     fclose(livros);//Fechando o arquivo.
 }
