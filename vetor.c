@@ -6,14 +6,12 @@
 //Instanciando as funções.
 void alocarVetor(struct livro **vetor){//Aqui é a função de alocar o vetor com o ponteiro duplo, pois o ponteiro duplo está apontando para o endereço de memoria do ponteiro simples que aponta para o próprio vetor. O uso do ponteiro duplo no parâmetro porque é no ponteiro simples que o programa deve mexer.
 
-     vetor[10];//Aqui está declarando o vetor com o tamanho 10.
-
     *vetor = malloc(10 * sizeof(struct livro));//Aqui está reservando um novo espaço de memória e alocando um novo endereço de memória no ponteiro simples que aponta para o vetor original com o uso do malloc.
 }
 
 void realocarVetor(struct livro **vetor){//Aqui é a função de realocar o vetor com o uso do ponteiro duplo. O uso do ponteiro duplo no parâmetro porque é no ponteiro simples que o programa deve mexer.
 
-    *vetor = realloc(40 * sizeof(struct livro));//Aqui está adicionando um espaço de memória e alocando no ponteiro simples que está pontando para o vetor original com o uso do realloc. Está sendo usado o realloc porque o realloc aumenta e diminui o espaço de endereço de memória de um inteiro.
+    *vetor = realloc(30 * sizeof(struct livro));//Aqui está adicionando um espaço de memória e alocando no ponteiro simples que está pontando para o vetor original com o uso do realloc. Está sendo usado o realloc porque o realloc aumenta e diminui o espaço de endereço de memória de um inteiro.
 }
 
 void cadastrarLivro(struct livro vetor[]){//Aqui é a função de cadastrar dados do vetor livro.

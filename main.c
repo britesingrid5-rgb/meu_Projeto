@@ -10,6 +10,8 @@
 
 int main(){
 
+   struct livro vetor[10];//Aqui está declarando o vetor com o tamanho 10.
+
    alocarVetor(vetor);//Aqui está chamando a função "alocarVetor" com o parâmetro vetor para o menu principal obter a execução da função. O nome da função para chamar a função que está fazendo a execução do programa e o parâmetro como ligação da função para o programa permitir que a função faça a execução devidamente. Que seria alocar o vetor com o uso do malloc.
 
    free(vetor);//Aqui está sendo liberado com o uso do free o que foi usado pela alocação do vetor. Um novo espaço de memória que foi reservado e alocado um novo endereço de memória no vetor com o uso do malloc.

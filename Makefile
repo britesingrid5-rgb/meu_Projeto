@@ -1,5 +1,5 @@
 biblioteca_PC1: *.c *.h
-	gcc *.c -o programa
+	gcc *.c -o biblioteca
 
 clean:
-	rm -f programa
+	rm -f biblioteca	

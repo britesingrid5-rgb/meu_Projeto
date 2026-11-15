@@ -2,15 +2,7 @@
 
 #ifndef VETOR_H
 #define VETOR_H
-
- struct livro{//Declaração do struct.
-     int id;
-     char titulo[100];
-     char autor[100];
-     int ano;
-     char categoria[50];
-
-     }livro;
+#include "livro.h"
 
 void alocarVetor(struct livro **vetor);//Declaração da função: alocar vetor.
 void realocarVetor(struct livro **vetor);//Declaração da função: realocar vetor.
