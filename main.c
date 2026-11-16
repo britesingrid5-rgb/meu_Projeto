@@ -18,7 +18,7 @@ int main(){
 
    realocarVetor(vetor);//Aqui está chamando a função "realocarVetor" com o parâmetro vetor para o menu principal obter a execução da função. O nome da função para chamar a função que está fazendo a execução do programa e o parâmetro como ligação da função para o programa permitir que a função faça a execução devidamente. Que seria realocar o vetor: adicioar mais um espaço de memória e aloca mais endereço de memória no vetor com o uso do realloc, que serve tanto para aumentar, quanto para diminuir o espaço de memória de um inteiro. 
 
-   int opcao;//Declarando a variável opção do tipo(int).
+   int opcao = 0;//Declarando a variável opção do tipo(int).
 
       //Iniciando o menu.
       printf("\n--------Menu-------");
