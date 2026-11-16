@@ -15,6 +15,11 @@ cd "nome da pasta" (sem as áspas)
 Para que serve o cd "nome da pasta". Exemplo: cd biblioteca_PC1
 Para que serve o comando cd biblioteca_PC1: O comando é para o terminal localizar que é essa pasta que está salvo no local Documentos e assim o terminal entender que é essa pasta que deve executar.
 
+Resumindoos comandos do segundo passo:
+cd
+cd "local onde a pasta está salva no computador" (sem as áspas).
+cd "nome da pasta" (sem as áspas).
+
 
 3: Ainda no terminal digite make de Makefile. Se o programa não executar com o comando make, digite os seguintes comandos:
 gcc *.c -o "o nome como quer chamar o exercício" (sem as áspas)
