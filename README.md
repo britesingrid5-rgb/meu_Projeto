@@ -22,6 +22,6 @@ cd "nome da pasta" (sem as áspas).
 
 
 3: Ainda no terminal digite make de Makefile. Se o programa não executar com o comando make, digite os seguintes comandos:
-gcc *.c -o "o nome como quer chamar o exercício" (sem as áspas)
+gcc *.c -o "o nome como quer chamar o exercício" (sem as áspas). Obs: o "nome como quer chamar o exercício" é o nome onde foi dado no arquivo Makefile.
 
 ./"o nome do exercício" (sem as áspas)
