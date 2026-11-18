@@ -19,7 +19,7 @@ void salvarDadosTxt(struct livro vetor[]){
 
     for(int i = 0; i < 25; i++){
         if(scanf("%d", &vetor[i].id)){//Leitura dos dados dos livros vetor.
-           fprintf(livros, "%d", vetor[i].id);
+           fprintf(livros, "%d", vetor[i].id);//Salvando os dados do livro no arquivo txt com o uso do fprintf.
         }
 
         if(fgets(vetor[i].titulo, sizeof(vetor[i].titulo), stdin)){
@@ -35,7 +35,7 @@ void salvarDadosTxt(struct livro vetor[]){
         }
 
         if(fgets(vetor[i].categoria, sizeof(vetor[i].categoria), stdin)){//Término da leitura.
-           fprintf(livros, "%s", vetor[i].categoria); 
+           fprintf(livros, "%s", vetor[i].categoria);//Término do fprintf. 
         }
     }
 
@@ -56,6 +56,7 @@ void salvarDadosDat(struct livro vetor[]){
 
    //Terminar o código.
 
+   fclose(livros);//Fechando o arquivo.
 }
 
 //Instanciando a função: lerArquivoSalvo(Txt).
@@ -67,10 +68,16 @@ void LerArquivoSalvo(struct livro vetor[]){
 
    if(livros == NULL){//Verificando se é possível ler o arquivo com o comando if.
       printf("\nErro. Nao foi possivel ler o arquivo livros txt.");
-      return 1;//Se não foi possível, encarra o programa.
+      return 1;//Se não foi possível, encerra o programa.
    }
 
-   //Terminar o código.
+   for(int i = 0; i < 25; i++){
+       fscanf(livros, "%d", vetor[i].id);//Lendo o arquivo salvo em txt com o uso do fscanf.
+       fscanf(livros, "%99s", vetor[i].titulo);
+       fscanf(livros, "%99s", vetor[i].autor);
+       fscanf(livros, "%d", vetor[i].ano);
+       fscanf(livros, "%49s", vetor[i].categoria);//Término da leitura.
+   }
 
     fclose(livros);//Fechando o arquivo.
 }

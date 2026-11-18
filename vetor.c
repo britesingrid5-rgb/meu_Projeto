@@ -115,7 +115,7 @@ void buscarLivros(struct livro vetor[]){
 
 void removerLivroID(struct livro vetor[]){
 
-    int id;//Declarando a variável id.
+    int id = 0;//Declarando a variável id.
 
     printf("\nInforme o id de um livro: ");//Aqui está pedindo para informar o id de um livro.
     scanf("%d", &id);//Leitura do id.
@@ -148,14 +148,17 @@ void gerarRelatorios(struct livro vetor[]){
     int contador = 0;//Declarando a variável contador.
 
     for(int i = 0; i < 25; i++){
-        vetor[i].categoria;
-           contador++;//Aqui está contando a quantidade dos livros por categoria.
+        if(vetor[i].categoria){
+             contador++;//Aqui está contando a quantidade dos livros por categoria.
+        }
     }
 
     printf("\nTotal de livros por categorias: %d", contador);//Imprimindo a quantidade de livros por categoria.
 
      int maior = 0;//Declarando a variável maior.
      int menor = 0;//Declarando a variável menor.
+     int recente = 0;
+     int antigo = 0;
 
     for(int i = 0; i < 25; i++){
 
@@ -163,16 +166,17 @@ void gerarRelatorios(struct livro vetor[]){
            maior = vetor[i].ano;
         }
 
-        vetor[i].ano = maior;//Aqui o vetor[i].ano recebe o ano mais recente de publicação.
+           recente = maior;//Aqui a variável recente recebe o ano mais recente de publicação.
 
         if(vetor[i].ano < menor){//Aqui está verificando qual dos livros cadastrados é o mais antigo.
            menor = vetor[i].ano; 
         }
-        vetor[i].ano = menor;//Aqui o vetor[i].ano recebe o ano mais antigo de publicação.
+
+           antigo = menor;//Aqui a variável antigo recebe o ano mais antigo de publicação.
     }
 
     for(int i = 0; i < 1; i++){
-        printf("\nLivro mais recente e o mais antigo: %d %d", vetor[i].ano, vetor[i].ano);//Aqui está imprindo o livro mais recente e o mais antigo.
+        printf("\nLivro mais recente e o mais antigo: %d %d", recente, antigo);//Aqui está imprindo o livro mais recente e o mais antigo.
     }
 
 }
