@@ -1,4 +1,4 @@
-biblioteca *.c *h
+biblioteca_PC1
 	cd
 	cd Documentos
 	cd biblioteca_PC1 	
@@ -6,4 +6,4 @@ biblioteca *.c *h
 	./biblioteca
 
 clean
-	rm -f biblioteca	
+	rm -f biblioteca_PC1	
