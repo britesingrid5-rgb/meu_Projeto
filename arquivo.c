@@ -2,9 +2,7 @@
 
 #include "arquivo.h"//Aqui no arquivo.c está chamando o arquivo.h
 #include <stdio.h>
-
-  struct livro vetor[];   
-
+ 
 //Instanciando a função: salvarDadosTxt(Texto).
 void salvarDadosTxt(struct livro vetor[]){
 
